@@ -6,6 +6,7 @@ module FirstGiving
 
     module Actions
       CREDITCARD = '/donation/creditcard'
+      CARD_ON_FILE = '/donation/cardonfile'
       RECURRING_CREDITCARD_PROFILE = '/donation/recurringcreditcardprofile'
       VERIFY = '/verify'
     end
@@ -21,6 +22,11 @@ module FirstGiving
 
     def creditcard(params)
       response = post_call(@api_endpoint, Actions::CREDITCARD, params, headers)
+      parse(response.body)
+    end
+    
+    def cardonfile(params)
+      response = post_call(@api_endpoint, Actions::CARD_ON_FILE, params, headers)
       parse(response.body)
     end
 
