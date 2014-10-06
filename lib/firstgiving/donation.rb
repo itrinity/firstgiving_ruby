@@ -6,7 +6,7 @@ module FirstGiving
 
     module Actions
       CREDITCARD = '/donation/creditcard'
-      CARD_ON_FILE = '/donation/cardonfile'
+      CARD_ON_FILE = '/cardonfile'
       RECURRING_CREDITCARD_PROFILE = '/donation/recurringcreditcardprofile'
       VERIFY = '/verify'
     end
